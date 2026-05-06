@@ -1,0 +1,7 @@
+### Create user
+POST http://localhost:8000/api/contract/analysis
+Content-Type: application/json
+
+{
+  "content": "This is a sample contract content for analysis."
+}
