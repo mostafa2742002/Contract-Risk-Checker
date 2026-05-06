@@ -11,13 +11,13 @@ from pydantic import ValidationError
 env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(env_path)
 
-from exceptions.glopal_exception_handler import (
+from app.exceptions.glopal_exception_handler import (
     json_decode_exception_handler,
     validation_error_handler,
     validation_exception_handler,
 )
-from schemas.user_contract_request import UserCreateRequest
-from services.contract_analysis_service import analyze_contract
+from app.schemas.user_contract_request import UserCreateRequest
+from app.services.contract_analysis_service import analyze_contract
 
 
 app = FastAPI()
@@ -35,4 +35,3 @@ register_exception_handlers()
 @app.post("/api/contract/analysis")
 async def contract_analysis_api(request: UserCreateRequest):
     return await analyze_contract(request.contract)
-
