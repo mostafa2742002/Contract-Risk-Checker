@@ -130,3 +130,11 @@ Below are example AI responses used in tests:
   ]
 }
 ```
+
+## Use of AI Assistance
+
+I used AI tools as a support layer during the assignment, not as a replacement for my own work. I started by brainstorming the task with ChatGPT to clarify requirements and shape the implementation plan. During development, I used Codex and GitHub Copilot to help investigate complex bugs, understand the root cause of errors, and speed up repetitive or boilerplate work such as test writing and README drafting.
+
+I also used AI to review and improve the wording of the Spec.md file after I wrote the first version, so I could make the requirements clearer and easier to follow. In every case, I kept the technical decisions, code changes, and final validation under my own control.
+
+This workflow helped me stay structured and efficient while still producing and reviewing all final outputs myself.
