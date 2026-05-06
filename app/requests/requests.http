@@ -1,4 +1,4 @@
-### Create user
+### Successful request
 POST http://localhost:8000/api/contract/analysis
 Content-Type: application/json
 
@@ -12,4 +12,12 @@ Content-Type: application/json
 
 {
   "content": 1531
+}
+
+### use ollama to analyze contract v1
+POST http://localhost:8000/api/contract/analysis
+Content-Type: application/json
+
+{
+  "contract": "Hi"
 }
