@@ -1,12 +1,11 @@
 import json
 from pydantic import ValidationError
 
+from config import MAX_RETRIES
 from prompts.dynamic_prompt import generate_dynamic_prompt
 from prompts.retry_prompt import retry_prompt
 from schemas.ai_analysis_response import AIAnalysisResponse
 from services.ai.ai_provider import get_ai_response
-
-MAX_RETRIES = 2
 
 
 def parse_and_validate_ai_response(ai_text_response: str) -> AIAnalysisResponse:

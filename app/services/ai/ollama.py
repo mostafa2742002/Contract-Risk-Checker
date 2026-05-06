@@ -1,8 +1,7 @@
-
-OLLAMA_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "llama3.1:8b"
-REQUEST_TIMEOUT_SECONDS = 60.0
 import httpx
+
+from config import OLLAMA_URL, OLLAMA_MODEL, REQUEST_TIMEOUT_SECONDS
+
 
 async def call_ollama(prompt: str) -> str:
     ollama_request = {

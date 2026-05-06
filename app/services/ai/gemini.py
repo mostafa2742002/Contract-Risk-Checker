@@ -1,9 +1,6 @@
 import httpx
 
-GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
-GEMINI_MODEL = "gemini-2.5-flash"
-REQUEST_TIMEOUT_SECONDS = 60.0
-GEMINI_API_KEY = ""
+from config import GEMINI_URL, GEMINI_MODEL, GEMINI_API_KEY, REQUEST_TIMEOUT_SECONDS
 
 
 async def call_gemini(prompt: str) -> str:
