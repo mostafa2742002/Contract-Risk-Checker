@@ -1,13 +1,9 @@
 import json
 import pytest
-import sys
-from pathlib import Path
 from unittest.mock import patch
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from services.contract_analysis_service import parse_and_validate_ai_response
-from schemas.ai_analysis_response import AIAnalysisResponse
+from app.services.contract_analysis_service import parse_and_validate_ai_response
+from app.schemas.ai_analysis_response import AIAnalysisResponse
 
 class TestJSONSchemaValidity:
     
@@ -73,10 +69,10 @@ class TestEvidenceFieldPresence:
 @pytest.mark.asyncio
 class TestStableBehavior:
     
-    @patch("services.contract_analysis_service.get_ai_response")
+    @patch("app.services.contract_analysis_service.get_ai_response")
     async def test_tc2_returns_probation_and_termination(self, mock_ai):
         
-        from services.contract_analysis_service import analyze_contract
+        from app.services.contract_analysis_service import analyze_contract
         
         mock_ai.return_value = json.dumps({
             "risks": [
@@ -105,10 +101,10 @@ class TestStableBehavior:
         assert "Probation" in risk_types
         assert "Termination" in risk_types
     
-    @patch("services.contract_analysis_service.get_ai_response")
+    @patch("app.services.contract_analysis_service.get_ai_response")
     async def test_safe_contract_returns_no_risks(self, mock_ai):
         
-        from services.contract_analysis_service import analyze_contract
+        from app.services.contract_analysis_service import analyze_contract
         
         mock_ai.return_value = json.dumps({"risks": []})
         
