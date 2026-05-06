@@ -1,11 +1,10 @@
 import json
-import httpx
 from pydantic import ValidationError
 
 from prompts.dynamic_prompt import generate_dynamic_prompt
 from prompts.retry_prompt import retry_prompt
 from schemas.ai_analysis_response import AIAnalysisResponse
-from services.ai.ollama import call_ollama
+from services.ai.ai_provider import get_ai_response
 
 MAX_RETRIES = 2
 
@@ -22,7 +21,7 @@ async def analyze_contract(contract_content: str) -> AIAnalysisResponse:
     last_error = None
 
     for _ in range(MAX_RETRIES + 1):
-        ai_text_response = await call_ollama(prompt)
+        ai_text_response = await get_ai_response(prompt)
 
         try:
             validated_response = parse_and_validate_ai_response(ai_text_response)
