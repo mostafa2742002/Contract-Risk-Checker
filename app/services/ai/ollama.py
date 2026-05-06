@@ -1,6 +1,6 @@
 import httpx
 
-from config import OLLAMA_URL, OLLAMA_MODEL, REQUEST_TIMEOUT_SECONDS
+from app.config import OLLAMA_URL, OLLAMA_MODEL, REQUEST_TIMEOUT_SECONDS
 
 
 async def call_ollama(prompt: str) -> str:
@@ -16,4 +16,3 @@ async def call_ollama(prompt: str) -> str:
     response.raise_for_status()
     ollama_response = response.json()
     return ollama_response.get("response", "")
-

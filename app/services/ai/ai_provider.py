@@ -1,6 +1,6 @@
 import httpx
-from services.ai.ollama import call_ollama
-from services.ai.gemini import call_gemini
+from app.services.ai.ollama import call_ollama
+from app.services.ai.gemini import call_gemini
 
 
 async def get_ai_response(prompt: str) -> str:

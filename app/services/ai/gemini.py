@@ -1,6 +1,6 @@
 import httpx
 
-from config import GEMINI_URL, GEMINI_MODEL, GEMINI_API_KEY, REQUEST_TIMEOUT_SECONDS
+from app.config import GEMINI_URL, GEMINI_MODEL, GEMINI_API_KEY, REQUEST_TIMEOUT_SECONDS
 
 
 async def call_gemini(prompt: str) -> str:
