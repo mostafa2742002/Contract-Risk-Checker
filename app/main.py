@@ -1,8 +1,15 @@
 import json
+import os
 
+from pathlib import Path
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 from pydantic import ValidationError
+
+
+env_path = Path(__file__).parent.parent / ".env"
+load_dotenv(env_path)
 
 from exceptions.glopal_exception_handler import (
     json_decode_exception_handler,
