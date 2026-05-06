@@ -73,3 +73,18 @@ async def validation_error_handler(
                 }
         }
     )   
+    
+    
+def runtime_exception_handler(
+    request: Request,
+    exc: RuntimeError
+):
+    return JSONResponse(
+        status_code=500,
+        content={
+                "error": {
+                    "code": "INTERNAL_ERROR",
+                    "message": "An unexpected error occurred during contract analysis."
+                }
+        }
+    )
