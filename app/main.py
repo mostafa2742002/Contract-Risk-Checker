@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 from pathlib import Path
 from dotenv import load_dotenv
@@ -8,7 +9,11 @@ from fastapi.exceptions import RequestValidationError
 from pydantic import ValidationError
 
 
-env_path = Path(__file__).parent.parent / ".env"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+env_path = Path(__file__).resolve().parent / ".env"
 load_dotenv(env_path)
 
 from app.exceptions.glopal_exception_handler import (
