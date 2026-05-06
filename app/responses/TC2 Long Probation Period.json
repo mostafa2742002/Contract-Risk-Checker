@@ -1,0 +1,21 @@
+{
+    "message": "Your contract has been analyzed successfully.",
+    "content": {
+        "risks": [
+            {
+                "type": "Termination",
+                "explanation": "The clause allows termination without prior notice or fair cause.",
+                "suggested_fix": "Require a minimum notice period before termination, and ensure fair cause is stated.",
+                "confidence": 0.95,
+                "evidence": "During the probation period of twelve months, the employer may end the employment relationship immediately."
+            },
+            {
+                "type": "Probation",
+                "explanation": "The probation period is excessively long at twelve months.",
+                "suggested_fix": "Reduce the probation period to a reasonable length (e.g., 3-6 months).",
+                "confidence": 0.9,
+                "evidence": "The employee will be subject to a probation period of twelve months."
+            }
+        ]
+    }
+}

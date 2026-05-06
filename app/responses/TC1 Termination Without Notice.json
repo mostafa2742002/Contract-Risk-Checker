@@ -1,0 +1,14 @@
+{
+    "message": "Your contract has been analyzed successfully.",
+    "content": {
+        "risks": [
+            {
+                "type": "Termination",
+                "explanation": "The clause allows termination without prior notice.",
+                "suggested_fix": "Require a minimum notice period before termination.",
+                "confidence": 0.98,
+                "evidence": "The employer may terminate the employee’s contract at any time without prior notice or compensation."
+            }
+        ]
+    }
+}

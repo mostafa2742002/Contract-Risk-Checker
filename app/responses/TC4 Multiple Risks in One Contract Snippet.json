@@ -1,0 +1,21 @@
+{
+    "message": "Your contract has been analyzed successfully.",
+    "content": {
+        "risks": [
+            {
+                "type": "Termination",
+                "explanation": "The probation period allows termination without prior notice.",
+                "suggested_fix": "Reduce the probation period to a reasonable length or introduce fair termination conditions.",
+                "confidence": 0.95,
+                "evidence": "During this period, the company may terminate the employee immediately without notice."
+            },
+            {
+                "type": "Exclusivity",
+                "explanation": "The contract restricts the employee from working for any other business during and after the probation period.",
+                "suggested_fix": "Restrict exclusivity only to certain roles or during specific periods, and clearly define what is considered 'working' (e.g., not just employment but also freelancing).",
+                "confidence": 0.85,
+                "evidence": "The employee is prohibited from working for any other business."
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "message": "Your contract has been analyzed successfully.",
+    "content": {
+        "risks": [
+            {
+                "type": "Exclusivity",
+                "explanation": "The employee is restricted from working for any other company, client, or business during the entire employment period.",
+                "suggested_fix": "Specify exceptions to this rule, such as permission to work for related companies or on personal projects outside working hours.",
+                "confidence": 0.95,
+                "evidence": "The employee must not work for any other company, client, or business during the entire employment period, even outside working hours."
+            }
+        ]
+    }
+}

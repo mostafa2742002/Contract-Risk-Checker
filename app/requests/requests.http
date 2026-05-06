@@ -19,5 +19,6 @@ POST http://localhost:8000/api/contract/analysis
 Content-Type: application/json
 
 {
-  "contract": "The employer may terminate the employee’s contract at any time without prior notice or compensation."
+  "contract": "The employee is entitled to paid annual leave according to applicable employment law. Either party may terminate the contract by giving thirty days written notice."
 }
+
