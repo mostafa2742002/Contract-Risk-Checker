@@ -19,5 +19,5 @@ POST http://localhost:8000/api/contract/analysis
 Content-Type: application/json
 
 {
-  "contract": "Hi"
+  "contract": "The employer may terminate the employee’s contract at any time without prior notice or compensation."
 }

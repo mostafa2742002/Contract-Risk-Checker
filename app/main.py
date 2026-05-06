@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 import httpx
+from prompts.dynamic_prompt import generate_dynamic_prompt
 from exceptions.glopal_exception_handler import validation_exception_handler
 from schemas.user_contract_request import UserCreateRequest
 
@@ -20,7 +21,7 @@ async def contract_analysis(request: UserCreateRequest):
     
     ollama_request = {
         "model": "llama3.1:8b",
-        "prompt": request.contract,
+        "prompt": generate_dynamic_prompt(request.contract),
         "stream": False 
     }
     
